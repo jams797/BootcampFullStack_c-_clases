@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj": {}
+    "C:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj": {}
   },
   "projects": {
-    "c:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj": {
+    "C:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj",
         "projectName": "clase1",
-        "projectPath": "c:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj",
+        "projectPath": "C:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\clase1.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\clases\\clase1\\clase1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -607,6 +607,24 @@ while(opcionMenu != "4") {
 
 
 
+Clase2 clase2 = new Clase2 {
+    clase1 = new Clase1 {
+        parametro1 = "Parametro 1"
+    }
+};
+
+
+// Clase1 claseT1 = new Clase1 {
+//     parametro1 = "Parametro 1"
+// };
+// Clase2 claseT2 = new Clase2 {
+//     clase1 = claseT1
+// };
+
+// clase2.clase1.parametro1 = "Modificado";
+
+
+
 void MensajesMenu() {
     Console.WriteLine("1 Para listar los productos");
     Console.WriteLine("2 Para ingresar un producto");
@@ -712,6 +730,17 @@ class Sucursal {
 // listaProductos = listaProductos.Where((prod) => prod.stock <= 5).ToList();
 // int cantidadProductosF = listaProductos.Count();
 // Console.WriteLine($"Cantidad de productos filtrada es {cantidadProductosF}");
+
+
+
+
+class Clase1 {
+    public string parametro1 {get; set;}
+}
+
+class Clase2 {
+    public Clase1 clase1 {get; set;}
+}
 
 
 

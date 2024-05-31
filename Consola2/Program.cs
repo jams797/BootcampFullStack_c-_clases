@@ -2,8 +2,6 @@
 using clase1.Helpers;
 using Consola2.Bll;
 
-Console.WriteLine("Hello, World!");
-
 
 Console.WriteLine($"Cantidad de personas: {MethodsHelper.listPerson.Count()}");
 

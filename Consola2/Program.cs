@@ -5,7 +5,7 @@ using Consola2.Bll;
 
 Console.WriteLine($"Cantidad de personas: {MethodsHelper.listPerson.Count()}");
 
-TransactionPersonBll transactionPersonBll = new TransactionPersonBll();
-transactionPersonBll.Menu();
+MenuBll menuBll = new MenuBll();
+menuBll.Menu();
 
 Console.WriteLine($"Cantidad de personas: {MethodsHelper.listPerson.Count()}");

@@ -27,5 +27,37 @@ namespace Consola2.Repository
             MethodsHelper.listPerson.Add(person);
             return true;
         }
+
+        public PersonModels? SearchPersonById(int idPerson)
+        {
+            return MethodsHelper.listPerson.FirstOrDefault((x) => x.Id == idPerson);
+        }
+
+        public bool DelePersonById(int idPerson)
+        {
+            PersonModels? personSearch = SearchPersonById(idPerson);
+            if (personSearch != null)
+            {
+                MethodsHelper.listPerson.Remove(personSearch);
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+        
+        public bool UpdateFundPerson(int idPerson, double fund)
+        {
+            PersonModels? personSearch = SearchPersonById(idPerson);
+            if (personSearch != null)
+            {
+                personSearch.Fund = fund;
+                
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using clase1.Helpers;
+﻿using Consola2.Helpers;
+using Consola2.Helpers.Messages;
 using Consola2.Models;
 using Consola2.Repository;
 using System;
@@ -35,10 +36,10 @@ namespace Consola2.Bll
                         Fund = double.Parse(fundPerson),
                     }
                 );
-                Console.WriteLine("Persona agregada correctamente");
+                Console.WriteLine(MethodsHelper.Message().personCreate);
             } else
             {
-                Console.WriteLine("La persona ya existe");
+                Console.WriteLine(MethodsHelper.Message().personCreateExist);
             }
         }
 

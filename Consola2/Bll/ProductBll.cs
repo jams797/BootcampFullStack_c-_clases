@@ -52,6 +52,13 @@ namespace Consola2.Bll
             Console.WriteLine("Ingrese el id del producto a eliminar");
             int id = int.Parse(Console.ReadLine());
 
+            bool haveHistry = (new BuyHistoryRepository()).HaveHistoryByProduct(id);
+            if (haveHistry)
+            {
+                Console.WriteLine("No se puede eliminar el producto, ya que tiene una factura activa");
+                return;
+            }
+
             bool deleted = productRepository.DeleteProductById(id);
 
             if (deleted)

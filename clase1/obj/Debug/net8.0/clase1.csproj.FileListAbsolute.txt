@@ -12,3 +12,4 @@ c:\Users\DELL\Documents\clases\clase1\clase1\obj\Debug\net8.0\refint\clase1.dll
 c:\Users\DELL\Documents\clases\clase1\clase1\obj\Debug\net8.0\clase1.pdb
 c:\Users\DELL\Documents\clases\clase1\clase1\obj\Debug\net8.0\clase1.genruntimeconfig.cache
 c:\Users\DELL\Documents\clases\clase1\clase1\obj\Debug\net8.0\ref\clase1.dll
+C:\Users\DELL\Documents\clases\clase1\clase1\obj\Debug\net8.0\clase1.sourcelink.json

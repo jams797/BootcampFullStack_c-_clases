@@ -62,6 +62,12 @@ namespace Consola2.Bll
             Console.WriteLine("Ingrese el ID a eliminar");
             int idPerson = int.Parse(Console.ReadLine().Trim());
 
+            bool haveHistry = (new BuyHistoryRepository()).HaveHistoryByPerson(idPerson);
+            if( haveHistry ) {
+                Console.WriteLine("No se puede eliminar el usuario, ya que tiene una factura activa");
+                return;
+            }
+
             bool deleted = (new PersonRepository()).DelePersonById(idPerson);
             if (deleted)
             {

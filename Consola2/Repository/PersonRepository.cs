@@ -59,5 +59,11 @@ namespace Consola2.Repository
                 return false;
             }
         }
+
+        public void ReduceFundPerson(int idPerson, double fundReduce)
+        {
+            PersonModels? personM = MethodsHelper.listPerson.FirstOrDefault(x => x.Id == idPerson);
+            personM.Fund = personM.Fund - fundReduce;
+        }
     }
 }

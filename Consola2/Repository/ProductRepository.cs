@@ -38,5 +38,11 @@ namespace Consola2.Repository
                 return false;
             }
         }
+
+        public void ReduceStockProduct(int idProd, int countReduce)
+        {
+            ProductModels? prodM = MethodsHelper.listProduct.FirstOrDefault(x => x.Id == idProd);
+            prodM.Count = prodM.Count - countReduce;
+        }
     }
 }

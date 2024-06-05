@@ -14,6 +14,8 @@ namespace Consola2.Helpers
 
         static public string codeLanguage = "es";
 
+        static public List<BuyHistoryModel> historyBuy = new List<BuyHistoryModel>();
+
         static public List<PersonModels> listPerson = new List<PersonModels>
         {
             new PersonModels

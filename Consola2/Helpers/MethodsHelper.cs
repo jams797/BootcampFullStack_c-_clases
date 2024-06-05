@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Consola2.Helpers
@@ -23,12 +24,14 @@ namespace Consola2.Helpers
                 Id = 1,
                 Name = "Jose",
                 Fund = 200.2,
+                Email = "correo1@gmail.com",
             },
             new PersonModels
             {
                 Id = 2,
                 Name = "Pepe",
                 Fund = 300.8,
+                Email = "correo1@gmail.com",
             },
         };
         static public List<ProductModels> listProduct = new List<ProductModels>()
@@ -52,7 +55,7 @@ namespace Consola2.Helpers
 
         public void ShowDataPerson(PersonModels person)
         {
-            Console.WriteLine($"{person.Id} - {person.Name} tiene {person.Fund} de saldo");
+            Console.WriteLine($"{person.Id} - {person.Name} tiene {person.Fund} de saldo, con correo {person.Email}");
         }
 
         public void ShowDataPersons(List<PersonModels> persons)
@@ -89,6 +92,35 @@ namespace Consola2.Helpers
             }
 
             return null;
+        }
+
+        public bool ValidateNameByParams(string name, int lengthMin, int lengthMax)
+        {
+            if (!Regex.IsMatch(name, (new ExpressValidateVarsHelper()).expressNameVal))
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+            if (name.Length >= lengthMin && name.Length <= lengthMax)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            if(!Regex.IsMatch(email, (new ExpressValidateVarsHelper()).expressEmailVal)) {
+                return false;
+            } else
+            {
+                return true;
+            }
         }
     }
 }

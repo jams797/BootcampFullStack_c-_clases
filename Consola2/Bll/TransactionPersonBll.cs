@@ -2,6 +2,7 @@
 using Consola2.Helpers.Messages;
 using Consola2.Models;
 using Consola2.Repository;
+using Consola2.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,10 @@ namespace Consola2.Bll
             string namePerson = Console.ReadLine().Trim();
             Console.WriteLine("Ingrese el saldo de la persona");
             string fundPerson = Console.ReadLine().Trim();
+            Console.WriteLine("Ingrese el correo de la persona");
+            string emailPerson = Console.ReadLine().Trim();
+
+            if (!(new PersonValidator()).IsValidCreateUser(namePerson, fundPerson, emailPerson)) return;
 
             PersonModels? personS = personRepository.SearchPersonByName(namePerson);
 
@@ -34,6 +39,7 @@ namespace Consola2.Bll
                         Name = namePerson,
                         Id = idSec,
                         Fund = double.Parse(fundPerson),
+                        Email = emailPerson,
                     }
                 );
                 Console.WriteLine(MethodsHelper.Message().personCreate);

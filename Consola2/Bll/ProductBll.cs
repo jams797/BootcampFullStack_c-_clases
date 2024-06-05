@@ -2,6 +2,7 @@
 using Consola2.Helpers.Messages;
 using Consola2.Models;
 using Consola2.Repository;
+using Consola2.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace Consola2.Bll
             int countP = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese el precio del producto");
             double price = double.Parse(Console.ReadLine());
+
+            if (!(new ProductValidator()).IsValidCreateProduct(name, countP, price)) return;
 
             ProductModels lastP = MethodsHelper.listProduct.LastOrDefault();
             int idP = lastP == null ? 1 : lastP.Id + 1;
